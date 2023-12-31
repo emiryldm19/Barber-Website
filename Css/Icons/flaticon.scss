@@ -1,0 +1,37 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?4808105bf8292407f159b4f860786d64") format("truetype"),
+url("./flaticon.woff?4808105bf8292407f159b4f860786d64") format("woff"),
+url("./flaticon.woff2?4808105bf8292407f159b4f860786d64") format("woff2"),
+url("./flaticon.eot?4808105bf8292407f159b4f860786d64#iefix") format("embedded-opentype"),
+url("./flaticon.svg?4808105bf8292407f159b4f860786d64#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "barber": "\f101",
+    "man-with-beard": "\f102",
+    "shampoo": "\f103",
+);
+
+.flaticon-barber:before {
+    content: map-get($flaticon-map, "barber");
+}
+.flaticon-man-with-beard:before {
+    content: map-get($flaticon-map, "man-with-beard");
+}
+.flaticon-shampoo:before {
+    content: map-get($flaticon-map, "shampoo");
+}

@@ -1,0 +1,93 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Flexbox Utilitys */
+.flex {
+    display: flex;
+}
+
+/* Flex Direction */
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* Flex Justify */
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+
+/* Background Utilitys */
+.bg-dark {
+    background: #7D5A50;
+    color: #fff;
+}
+
+.bg-light {
+    background: var(--fourth-color);
+    color: #333;
+}
+
+.bg-super-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--fourth-color);
+    color: #333;
+    border: 1px solid #333;
+    font-size: 2rem;
+    padding: 1rem 1.5rem 0.9rem 1.5rem;
+    border-radius: 0.5rem;
+    height: max-content;
+}
+
+.btn:after {
+    content: '';
+    width: 0;
+    height: 1px;
+    display: block;
+    background: #333;
+    transition: width 0.3s ease-out;
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-dark {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* headings */
+.section-heading {
+    font-size: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+/* Padding */
+.py10 {
+    padding: 5rem 0;
+}

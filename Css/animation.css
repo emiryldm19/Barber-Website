@@ -1,0 +1,25 @@
+@keyframes heading {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes menu {
+    from {
+        right: -1000px;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@keyframes content {
+
+    to {
+        opacity: 1;
+    }
+}

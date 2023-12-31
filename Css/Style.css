@@ -1,0 +1,502 @@
+:root {
+    --primary-color: #7D5A50;
+    --secondary-color: #B4846C;
+    --third-color: #E5B299;
+    --fourth-color: #FCDEC0;
+    --dark-color: #322420;
+}
+
+html {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'lato', sans-serif;
+    background: var(--fourth-color);
+    color: #333;
+    font-size: 10px;
+    /* overflow-x: hidden; */
+    line-height: 1.4;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* Navbar */
+
+#nav-bar {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+#nav-bar h1 span {
+    color: var(--secondary-color);
+}
+
+#nav-bar .header {
+    animation: 1s heading ease-out 0.5s forwards;
+    position: relative;
+    left: -300px;
+}
+
+#nav-bar ul {
+    position: relative;
+    font-size: 2rem;
+    animation: 2s menu ease-out 0.5s forwards;
+    right: -1000px;
+}
+
+#nav-bar ul li {
+    padding: 1rem;
+    transition: color 0.25s;
+}
+
+#nav-bar ul li:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    color: 	#DCDCDC;
+    transform: scale(0.95);
+}
+
+#navbar .navbar .top {
+    background: transparent;
+}
+
+/* Header */
+.hero {
+    background: url('../img/Header.jpg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+}
+
+.hero:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.4);
+}
+
+.content * {
+    z-index: 1;
+}
+
+.content {
+    /* transition: animation 1s; */
+    text-align: center;
+    height: 100%;
+    opacity: 0;
+    animation: 1.5s content ease-in forwards 2s;
+}
+
+.content h2 {
+    padding: 2rem 0;
+    font-size: 5rem;
+}
+
+.content p {
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.content button i {
+    padding-right: 0.5rem;
+}
+
+/* About Section */
+
+#About p {
+    padding: 1rem 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Team Section */
+
+.crew {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.crew img {
+    max-width: 350px;
+    min-height: 525px;
+    border-radius: 1rem;
+}
+
+.barber {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 1 50%;
+    min-height: 350px;
+}
+
+.barber h4 {
+    font-size: 2.5rem;
+}
+
+.barber h4 span {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.barber p {
+    font-size: 1.5rem;
+    padding: 0.8rem 0;
+}
+
+.barber:first-child {
+    flex: 1 1 100%;
+}
+
+/* Gallery */
+#gallery {
+    color: #333;
+}
+
+#gallery .pictures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    padding: 0 5rem;
+}
+
+#gallery .pictures img {
+    max-width: 100%;
+    justify-self: center;
+    align-self: center;
+     
+}
+
+
+
+
+/* Prices */
+
+.price-pannel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 90vw;
+    margin: auto;
+    padding: 5rem 0;
+    border-radius: 1rem;
+}
+
+.price-pannel button {
+    flex: 1 1 100%;
+}
+
+.price-cat {   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+    margin: 0 1.5rem;
+    text-align: left;
+    font-size: 2rem;
+    max-width: 300px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.price-cat img {
+    height: 200px;
+}
+
+.price-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    font-size: 2rem;
+}
+
+.price-description h3 {
+    font-size: 2rem;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    left: 0;
+    bottom: 67px;
+    height: 0;
+    width: 100%;
+    background: var(--fourth-color);
+    transition: height 0.3s ease-out, opacity 0.3s ease-out;
+    z-index: 2;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 700;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-out, visibility 0.2s ease-out;
+    z-index: 5;
+}
+
+.price-cat:hover {
+    box-shadow: 5px 5px 17px 5px rgba(0,0,0,0.8);
+}
+
+
+.price-cat:hover .overlay-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.price-cat:hover .overlay {
+    height: 201px;
+    cursor: pointer;
+}
+
+/* Contact */
+#contact input {
+    display: block;
+}
+
+#contact h3 {
+    font-size: 2rem;
+    padding: 0 .2rem;
+}
+
+#contact .contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+}
+
+#contact .contact-container input,
+#contact .contact-container Textarea {
+    width: 100%;
+    margin: 1rem 0 ;
+    padding: 1rem 1rem;
+    outline: none;
+    background: #333;
+    border: none;
+    color: #fff;
+}
+
+#contact .contact-container textarea {
+    min-height: 200px;
+}
+
+#contact .contact-container textarea:focus, 
+#contact .contact-container input:focus {
+    border: #DCDCDC 1px solid;
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 0.8;
+}
+
+#contact .contact-container > div:last-child {
+    justify-self: center;
+    align-self: center;
+    font-size: 2.5rem;
+    padding: 0 1.5rem;
+}
+
+#contact .contact-container > div:last-child > i {
+    text-align: center;
+    width: 100%;
+    font-size: 5rem;
+    padding-bottom: 1rem;
+}
+
+#contact .contact-container > div:last-child p i {
+    padding-right: 1rem;
+}
+
+#contact .contact-container > div:last-child p:nth-of-type(3) {
+    margin-bottom: 2rem;
+}
+
+#contact .contact-container .btn {
+    margin: auto;
+}
+
+#contact .contact-container .btn:after {
+    background: #fff;
+}
+
+/* Footer */
+#main-footer {
+    margin-top: 5rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 0;
+    flex-wrap: wrap;
+}
+
+#main-footer .footer-container > div h2 {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+#main-footer .footer-container .opening-hours {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-footer .footer-container .opening-hours div {
+    padding: 0 3rem;
+    font-size: 2rem;
+}
+
+
+#main-footer .footer-container .opening-hours div:first-child {
+    padding-left: 0;
+}
+
+#main-footer .footer-container .opening-hours div:last-child {
+    text-align: right;
+} 
+
+#main-footer .footer-container .social {
+    font-size: 5rem;
+}
+
+#main-footer .footer-container .social a {
+    padding: 0 1rem;
+    transition: color 0.35s ease;
+}
+
+#main-footer .footer-container .social a:first-child {
+    padding-left: 0;
+}
+
+#main-footer .footer-container .social a:hover {
+    color: #E5B299;
+}
+
+
+#main-footer .rights {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--dark-color);
+}
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 8px; /* Telefonlar için daha küçük bir temel font boyutu */
+    }
+
+    h1 {
+        font-size: 3rem; /* Başlık boyutunu küçült */
+    }
+
+    #nav-bar ul {
+        font-size: 1.5rem; /* Navigasyon menüsü için font boyutu */
+    }
+
+    .hero {
+        height: 50vh; /* Telefon ekranlarında kahraman bölümünün yüksekliğini azalt */
+    }
+
+    .crew img {
+        max-width: 100%;
+        min-height: auto; /* Ekip resimlerini ekran genişliğine göre ölçeklendir */
+    }
+
+    .price-pannel {
+        flex-direction: column; /* Fiyat panellerini dikey olarak sırala */
+    }
+
+    #contact .contact-container {
+        grid-template-columns: 1fr; /* İletişim formunu tek sütun halinde düzenle */
+    }
+    
+    /* Diğer telefon ekranı özelleştirmeleri */
+}
+section {
+    display: none;
+}
+
+section#home {
+    display: block;
+}
+
+section {
+    display: none;
+}
+
+section#About {
+    display: block;
+}
+
+section {
+    display: none;
+}
+
+section#gallery {
+    display: block;
+}
+section {
+    display: none;
+}
+
+section#prices {
+    display: block;
+}
+section {
+    display: none;
+}
+
+section#contact {
+    display: block;
+}
+
